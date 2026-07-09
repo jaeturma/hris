@@ -1,36 +1,33 @@
 # Audit and Compliance
 
-The system must support CSC PRIME-HRM readiness, CBHRMS implementation evidence, Data Privacy Act safeguards, and government records management.
+The HRIS must produce credible, office-scoped evidence for DepEd workflow compliance, CSC PRIME-HRM readiness, CBHRMS implementation, Data Privacy Act safeguards, and government records management.
 
-## Audit Principles
+## Audit Coverage
 
-- Log significant actions with actor, subject, office scope, event, timestamp, and safe changed-field details.
-- Protect activity logs from unauthorized viewing.
-- Avoid logging excessive personal data.
-- Preserve official HR history.
-- Audit changes to competency definitions, position profiles, proficiency levels, behavioral indicators, and position-to-competency mappings.
+- Vacancy creation, publication, correction, withdrawal, and closing.
+- Applicant registration, application submission, withdrawal, and document changes.
+- Documentary requirement verification and rejection.
+- Qualification standards checking.
+- Evaluation criteria changes.
+- Assessment, interview, HRMPSB evaluation, and ranking updates.
+- CAR / CAR-RQA / RQA-style output generation.
+- Appointment recommendation and appointment tracking status changes.
+- Promotion, career progression, reclassification, personnel movement, and service record updates.
+- Competency dictionary, position profile, and competency mapping changes.
+- Export, report generation, and sensitive record viewing where appropriate.
 
-## Compliance Areas
+## Compliance Architecture
 
-- CSC PRIME-HRM
-- CSC Resolution No. 2600005 as a policy area to support
-- Agency Competency-Based Human Resource Management System
-- Meritocracy and excellence in government HRM
-- DepEd hiring, placement, promotion, and reclassification guidelines
-- Civil Service Commission rules
-- Data Privacy Act
-- Government records management
+- DepEd Orders and Memoranda drive workflow logic.
+- CSC rules and Qualification Standards guide eligibility and appointment records.
+- PRIME-HRM supports maturity evidence and strategic HR reporting.
+- CBHRMS supports competency-based decisions across the HR lifecycle.
+- Data Privacy Act requires data minimization, access controls, and careful export handling.
+- Government records management requires document history, retention awareness, and traceability.
 
-## Evidence Architecture
+## Evidence Rules
 
-The system should be able to produce evidence for:
-
-- Merit selection plan alignment
-- SPMS alignment
-- PRAISE alignment
-- Competency-based recruitment and placement
-- Competency-based performance management
-- Competency-based learning and development
-- Competency-based rewards and recognition
-- Audit trail review
-- Office-scoped compliance monitoring
+- Store the policy basis or configuration version used for a workflow decision.
+- Preserve the evaluation criteria and competency profile used at the time of assessment.
+- Keep document history and avoid silent replacement of official evidence.
+- Make audit reports permission-gated and office-scoped.

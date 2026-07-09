@@ -1,39 +1,55 @@
 # Module Map
 
-## Foundation Modules
+## Foundation
 
-- Organization Structure
-- Roles, Permissions, and Office Scope
-- Audit Trail
-- Reference Data
-- Competency Framework
-- Position and Plantilla
+- Office Hierarchy and Office / Station Management
+- Roles, Permissions, Office Scope, and Approval Authority
+- Audit Trail and Document History
+- Reference Data and Policy Configuration
+- Position, Plantilla, and Salary Grade Foundation
+- Competency Framework and Position Profiles
 
-## HR Lifecycle Modules
+## DepEd Recruitment, Selection, and Appointment
 
-- Employee Profile and 201 Files
-- Recruitment, Selection, and Placement
-- Appointment and Personnel Actions
-- Performance Management and Competency Assessment
-- Learning and Development / Individual Development Plan
-- Promotion, Reclassification, and Succession Readiness
-- Rewards and Recognition
-- Leave, Attendance, and Payroll Preparation
+- Vacancy and Publication
+- Applicant Registration
+- Position Application
+- Documentary Requirements
+- Qualification Standards Checking
+- Initial Evaluation
+- Comparative Assessment
+- HRMPSB Evaluation
+- Ranking
+- CAR / CAR-RQA / RQA-style Output where applicable
+- Appointment Recommendation
+- Appointment Tracking
 
-## Reporting Modules
+## DepEd Career and Personnel Actions
 
-- Operational Reports
-- Compliance Reports
-- PRIME-HRM Readiness
-- Competency Gap Analytics
-- Workforce and Plantilla Analytics
-- AI-Assisted HR Decision Support
+- Promotion to Higher Teaching Positions
+- Expanded Career Progression for Teachers and School Heads
+- Reclassification Requests
+- Personnel Movement
+- Service Record Updating
+- 201 File Document Management
 
-## Competency References by Module
+## Strategic HR and CBHRMS
 
-- Recruitment compares applicant evidence against position profiles.
-- Placement checks fit against position competency requirements.
-- Performance links ratings to competency expectations and behavioral indicators.
-- Learning and development targets competency gaps.
-- Promotion and reclassification use competency evidence.
-- Rewards and recognition link demonstrated competencies with performance.
+- Competency Mapping
+- Position Profile Management
+- Competency Assessment
+- Performance Rating Linkage
+- Individual Development Plan
+- Learning and Development Intervention
+- Promotion Readiness
+- Succession Planning Readiness
+- Rewards and Recognition Linkage
+
+## Reports and Assistance
+
+- DepEd compliance reports
+- HRMPSB outputs
+- Appointment and personnel action trackers
+- PRIME-HRM readiness reports
+- Competency gap analytics
+- AI-assisted drafting and review with human approval

@@ -1,41 +1,37 @@
 # Core Domains
 
-## Organization
+## Office Hierarchy
 
-Models Region, Division, District, School, and Implementing Unit scope. Every sensitive HR record must have clear office ownership or visibility rules.
+Defines Region, Division, District, School, Implementing Unit, and Office / Station. This domain controls office scope, reporting scope, permissions, and document ownership.
 
-## Position and Plantilla
+## Position, Plantilla, and Career Structure
 
-Models Plantilla Item, Item Number, Position Title, Salary Grade, appointment status, and position assignment history.
+Defines Position, Position Title, Plantilla Item, Item Number, Salary Grade, Promotion Track, Career Progression Level, Position Competency Profile, and reclassification relationships.
 
 ## Competency Framework
 
-Models Competency Model, Core Competencies, Leadership Competencies, Functional or Technical Competencies, Competency Dictionary, Job Family, Position Profile, Proficiency Levels, Behavioral Indicators, and Position-to-Competency Mapping.
+Defines Competency Model, Competency Dictionary, proficiency levels, behavioral indicators, competency mapping, competency assessment, competency gap analysis, and Individual Development Plan linkage.
 
-## Employee Records
+## Applicant and Recruitment
 
-Models employee profiles, government employment information, 201 file metadata, service records, leave records, and sensitive HR evidence.
+Defines Applicant, Application, Vacancy, Publication, Documentary Requirement, Qualification Standard, Evaluation Criteria, Initial Evaluation, Comparative Assessment, Ranking, and appointment recommendation artifacts.
 
-## Recruitment, Selection, and Placement
+## HRMPSB
 
-Uses qualification standards, position profiles, competency requirements, HRMPSB workflow evidence, and merit selection plan alignment.
+Defines HRMPSB membership, evaluator assignments, assessment records, interview records, deliberation evidence, ranking outputs, and recommendation tracking.
 
-## Performance and Competency Assessment
+## Employee and Personnel Records
 
-Links performance ratings, SPMS alignment, competency expectations, behavioral indicators, assessment evidence, and gap analysis.
+Defines Employee, 201 File Document, Service Record, Appointment, Personnel Movement, Promotion, Reclassification Request, Performance Rating, and employment history.
 
-## Learning and Development
+## Appointment and Personnel Movement
 
-Uses competency gap analysis to define Individual Development Plans and learning interventions.
+Tracks appointment recommendation, appointment status, station assignment, transfer, promotion, reclassification, separation, and service record updates.
 
-## Promotion, Reclassification, and Succession
+## Performance, L&D, Rewards, and Recognition
 
-Uses performance evidence, competency evidence, position requirements, promotion readiness, succession planning readiness, and applicable DepEd or CSC rules.
+Links SPMS-aligned Performance Rating, competency expectations, competency gaps, Individual Development Plans, Learning and Development interventions, PRAISE alignment, and rewards or recognition evidence.
 
-## Rewards and Recognition
+## Audit, Compliance, and Reporting
 
-Links performance, demonstrated competencies, PRAISE alignment, and recognition evidence.
-
-## Audit, Compliance, and Analytics
-
-Provides activity logs, compliance reports, PRIME-HRM readiness views, data privacy controls, and policy-aware analytics.
+Provides Audit Log, document history, PRIME-HRM readiness, policy-alignment reports, RQA-style outputs where applicable, workforce analytics, and competency analytics.

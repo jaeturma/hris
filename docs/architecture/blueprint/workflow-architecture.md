@@ -1,28 +1,30 @@
 # Workflow Architecture
 
-HR workflows must be stateful, auditable, permission-gated, and office-scoped.
+DepEd Orders and Memoranda should drive workflow logic. CSC PRIME-HRM and CBHRMS strengthen the competency-based and strategic HR layer. This document gives architecture guidance only and does not define final legal rules.
 
-## Workflow Pattern
+## Workflow Standard
 
-Each workflow should define:
+Each major workflow must document purpose, actors, required records, approvals, output documents or reports, audit trail, role and permission considerations, policy dependency, and future automation opportunities before implementation.
 
-- Draft, submitted, reviewed, approved, rejected, cancelled, and finalized states where applicable.
-- Submitter, reviewer, HRMPSB participant, approving authority, records officer, and auditor responsibilities.
-- Required documents or evidence.
-- Competency references when the process affects recruitment, placement, performance, learning, promotion, reclassification, succession, or rewards.
-- Audit events and retention expectations.
-
-## Competency-Aware Lifecycle
-
-- Recruitment starts from a position profile and required competencies.
-- Selection records applicant qualification and competency evidence.
-- Placement validates position fit and office assignment.
-- Performance compares actual results and behaviors against expectations.
-- Competency assessment records proficiency evidence and gaps.
-- Learning and development creates IDPs from gaps.
-- Promotion and reclassification use readiness evidence.
-- Rewards and recognition use performance and demonstrated competency evidence.
-
-## Implementation Rule
-
-Do not implement workflow logic until its state model, permissions, office scope, audit events, and competency touchpoints are documented.
+| Workflow | Purpose | Actors | Required Records | Approvals | Outputs | Audit and Permissions | Policy / Framework Dependency | Future Automation |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Vacancy and Publication | Publish open positions with correct scope and requirements. | HR staff, approving authority, records officer. | Vacancy, Publication, Position, Plantilla Item, Qualification Standard, Position Competency Profile. | Publication approval where required. | Publication notice, vacancy list. | Log create/update/publish/withdraw; restrict draft vacancies. | DepEd hiring issuances, CSC QS. | Template generation, deadline reminders. |
+| Applicant Registration | Capture applicant identity and contact data. | Applicant, HR staff. | Applicant profile, consent records, account or reference number. | None unless manual verification is required. | Applicant record. | Privacy controls, duplicate checks, access logs. | Data Privacy Act. | Duplicate detection, profile completeness checks. |
+| Position Application | Connect applicant to vacancy. | Applicant, HR staff. | Application, Vacancy, Position, applicant declarations. | Submission acceptance rules. | Submitted application. | Log submission, withdrawal, edits. | DepEd recruitment rules. | Eligibility hints, missing requirement alerts. |
+| Documentary Requirements | Track submitted and missing documents. | Applicant, HR staff, records officer. | Documentary Requirement, uploaded or physical document metadata, 201 File Document if employee-applicant. | Verification by authorized HR staff. | Document checklist. | Log upload, verify, reject, replace; protect documents. | DepEd and CSC documentary rules, records management. | OCR-assisted indexing, completeness scoring. |
+| Qualification Standards Checking | Compare applicant data against QS. | HR evaluator, HRMPSB support. | Qualification Standard, Application, education, experience, training, eligibility evidence. | Evaluator validation. | QS result, disqualification reason where applicable. | Log evaluator, criteria, result, changes. | CSC QS, DepEd issuance. | Rule-assisted checklist, not final automated decision. |
+| Initial Evaluation | Screen applications before comparative assessment. | HR staff, evaluator. | Application, documentary checklist, QS result. | HR review. | Initial evaluation result. | Log pass/fail and basis. | DepEd recruitment process. | Batch screening dashboard. |
+| Comparative Assessment | Score or compare qualified applicants. | Evaluators, HRMPSB. | Evaluation Criteria, Assessment, Interview, competency evidence, performance evidence where applicable. | HRMPSB review. | Comparative Assessment Result. | Log criteria version, evaluator, score changes. | DepEd hiring and promotion issuances. | Calculation support after policy confirmation. |
+| HRMPSB Evaluation | Record board evaluation and deliberation evidence. | HRMPSB members, secretariat, chair. | HRMPSB, evaluator assignments, assessments, interview records. | Board action and recommendation. | HRMPSB evaluation record. | Protect deliberation records; log member actions. | DepEd HRMPSB guidance. | Meeting packet generation. |
+| Ranking | Produce ranked list where applicable. | HR staff, HRMPSB, approving authority. | Comparative Assessment Result, Ranking, criteria basis. | Review and approval. | Ranking list. | Log ranking generation, adjustments, approval. | DepEd ranking rules and memoranda. | Controlled ranking generation. |
+| CAR / CAR-RQA / RQA-style Output | Produce required comparative or registry-style outputs where applicable. | HR staff, HRMPSB, records officer. | Ranking, assessment results, applicant details. | Approval or certification where required. | CAR, CAR-RQA, RQA-style reports. | Export logging, report versioning. | DepEd issuance and local memoranda. | Report templates and audit-ready exports. |
+| Appointment Recommendation | Recommend candidate for appointment. | HRMPSB, HR staff, appointing authority. | Ranking, HRMPSB evaluation, candidate record, vacancy. | Appointing authority action. | Recommendation memo or tracker entry. | Log recommendation, selection basis, changes. | DepEd and CSC appointment rules. | Recommendation packet builder. |
+| Appointment Tracking | Track appointment processing status. | HR staff, appointing authority, records officer. | Appointment, supporting documents, item details. | Appointment approval and records update. | Appointment tracker, appointment document metadata. | Log status changes and document history. | CSC and DepEd appointment rules. | Status reminders, bottleneck reports. |
+| Promotion to Higher Teaching Positions | Manage higher teaching position promotion workflow. | Employee-applicant, HR, HRMPSB, approving authority. | Application, performance rating, competency evidence, QS, position profile. | HRMPSB and appointing authority. | Promotion recommendation, appointment tracking. | Log evidence, assessment, ranking, approval. | DO 020 s. 2024 and related issuances. | Readiness dashboard. |
+| Expanded Career Progression | Support teacher and school head career progression. | Employee, HR, supervisor, HRMPSB, approving authority. | Promotion Track, Career Progression Level, performance, competency profile, evidence. | Required career progression review. | Career progression record. | Log progression basis and approvals. | DO 024 s. 2025, DO 034 s. 2025. | Career path planner. |
+| Reclassification Requests | Track position or personnel reclassification requests. | Employee or office requester, HR, approving authority. | Reclassification Request, position, plantilla, justification, competency and performance evidence. | Required review and approval path. | Reclassification tracker and recommendation. | Log request, evaluation, approval, denial. | DepEd reclassification guidance, CSC rules. | Evidence completeness review. |
+| Competency Mapping | Map positions to competencies. | HR planner, competency administrator, approver. | Competency Model, Dictionary, Position Competency Profile. | Governance approval. | Approved mapping. | Audit definition and mapping changes. | CBHRMS, PRIME-HRM. | Mapping gap detector. |
+| Position Profile Management | Maintain position expectations. | HR planner, plantilla manager, competency administrator. | Position, Position Title, Salary Grade, QS, competency profile. | Governance approval. | Position profile. | Version profile changes. | CSC QS, CBHRMS. | Profile comparison tools. |
+| Personnel Movement | Track movement across offices or positions. | HR staff, employee, approving authority, records officer. | Personnel Movement, Appointment, Position, Office / Station. | Movement approval. | Movement order metadata, updated assignment. | Log effective dates and office changes. | DepEd personnel action rules. | Service record update suggestions. |
+| Service Record Updating | Update official service history. | Records officer, HR staff. | Service Record, Appointment, Personnel Movement, promotion, separation. | Records validation. | Updated service record. | Preserve correction history and actor. | Government records management. | Draft updates from approved actions. |
+| Audit Trail and Document History | Preserve traceability. | System, auditors, records officers. | Audit Log, document versions, actor context. | Auditor access controls. | Audit reports. | Immutable event history where practical. | PRIME-HRM, Data Privacy, records rules. | Anomaly detection and audit summaries. |

@@ -1,50 +1,50 @@
 # Data Model Overview
 
-The data model must separate reference data, official HR records, transactional workflow records, competency evidence, and audit history.
+The data model must separate office hierarchy, reference data, position data, applicant data, employee records, workflow transactions, competency evidence, documents, and audit logs.
 
-## Reference Data
+## Major Data Concepts
 
-- Regions, Divisions, Districts, Schools, Implementing Units
-- Position Titles
-- Salary Grades
-- Job Families
-- Competency Models
+- Applicant
+- Employee
+- Position
+- Position Title
+- Plantilla Item
+- Item Number
+- Salary Grade
+- Office / Station
+- School / Implementing Unit
+- Vacancy
+- Publication
+- Application
+- Documentary Requirement
+- Qualification Standard
+- Evaluation Criteria
+- Evaluator
+- HRMPSB
+- Assessment
+- Interview
+- Ranking
+- Comparative Assessment Result
+- Appointment
+- Personnel Movement
+- Reclassification Request
+- Promotion Track
+- Career Progression Level
+- Competency Model
 - Competency Dictionary
-- Proficiency Levels
-- Behavioral Indicators
-
-## Position and Competency Data
-
-- Plantilla Items
-- Item Numbers
-- Position Profiles
-- Position-to-Competency Mapping
-- Required proficiency levels
-- Effective dates for position requirements
-
-## Employee and HR Records
-
-- Employee profile
-- Government employment details
-- 201 file metadata
-- Service records
-- Leave records
-- Appointment, promotion, transfer, reclassification, and separation records
-
-## Competency Transaction Data
-
-- Competency assessments
-- Competency evidence
-- Competency gap analysis
-- Individual Development Plans
-- Learning and Development interventions
-- Succession planning readiness
-- Promotion readiness
-- Rewards and recognition linkage
+- Position Competency Profile
+- Competency Assessment
+- Individual Development Plan
+- Performance Rating
+- 201 File Document
+- Audit Log
 
 ## Design Rules
 
-- Preserve the competency requirements used for a decision at the time of decision.
-- Avoid hard deletes for official HR and competency evidence records.
-- Use audit logs for changes to competency dictionaries, mappings, assessments, and readiness indicators.
-- Apply office scope and privacy rules to all employee-linked competency data.
+- Keep applicant records separate from employee records until appointment or employment linkage is established.
+- Keep vacancy, publication, application, evaluation, ranking, recommendation, and appointment tracking as separate but related records.
+- Preserve historical qualification standards, evaluation criteria, competency requirements, and ranking basis used for a decision.
+- Keep Position, Plantilla Item, Item Number, Salary Grade, and Position Competency Profile distinct.
+- Link Service Record updates to the underlying Appointment or Personnel Movement.
+- Link promotion, reclassification, and career progression records to position, performance, competency, and policy evidence.
+- Apply office scope and document access rules to all employee, applicant, HRMPSB, and competency records.
