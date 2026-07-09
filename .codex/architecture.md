@@ -6,6 +6,8 @@ This project is a DepEd HRIS built with Laravel 13, React, Inertia, MySQL, Vite,
 
 - Keep Laravel as the system of record and Inertia React as the user interface layer.
 - Use MySQL for relational HR records; avoid storing authoritative personnel state only in JSON blobs.
+- Treat CSC PRIME-HRM and Competency-Based Human Resource Management System alignment as foundational architecture requirements.
+- Treat competency management as a shared platform capability used by recruitment, placement, performance, learning and development, promotion, reclassification, succession readiness, and rewards.
 - Preserve history for personnel actions. Appointments, promotions, transfers, reclassifications, separations, leave activity, and service records must be append-friendly and auditable.
 - Keep modules bounded by HR business capability, not by screen names.
 - Prefer Laravel Form Requests, policies or permission checks, service/action classes, Eloquent relationships, events, and jobs where they match existing project patterns.
@@ -17,9 +19,15 @@ Architecture must support Region offices, Schools Division Offices, Districts, S
 
 ## Module Boundaries
 
-Future modules should be planned around organizational structure, employee profiles and 201 files, plantilla and position management, recruitment, HRMPSB workflows, appointments, promotions, reclassification, transfers, separations, service records, leave management, performance ratings, reports, administration, roles, permissions, and audit logs.
+Future modules should be planned around organizational structure, employee profiles and 201 files, plantilla and position management, competency framework, position profiles, recruitment, HRMPSB workflows, appointments, promotions, reclassification, transfers, separations, service records, leave management, competency-based performance management, learning and development, Individual Development Plans, rewards and recognition, reports, administration, roles, permissions, and audit logs.
 
 Before creating a module, document purpose, users, policy area, data ownership, office scope, state transitions, permissions, audit events, reports, retention needs, Pest tests, and static analysis checks.
+
+## Competency Architecture
+
+The system must support a competency backbone made of Competency Models, Competency Dictionary entries, Job Families, Position Profiles, Position-to-Competency Mapping, Proficiency Levels, Behavioral Indicators, Competency Assessments, Gap Analysis, Individual Development Plans, and competency evidence.
+
+Competency data must be reusable across HR lifecycle modules rather than duplicated inside each workflow. A position profile should become the common reference for recruitment criteria, placement fit, performance expectations, learning needs, promotion readiness, reclassification support, succession readiness, and rewards or recognition evidence.
 
 ## Inertia Boundaries
 

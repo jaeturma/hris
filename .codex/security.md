@@ -18,6 +18,7 @@ Actual roles must be confirmed before implementation, but future designs should 
 ## Data Privacy
 
 - Treat employee profiles, 201 files, leave records, performance ratings, recruitment records, and service records as sensitive personal information.
+- Treat competency assessments, gap analyses, Individual Development Plans, succession readiness, promotion readiness, and rewards evidence as sensitive HR decision-support records.
 - Apply data minimization.
 - Mask or omit personal data in lists when full details are unnecessary.
 - Restrict exports and downloads.
@@ -43,3 +44,10 @@ Actual roles must be confirmed before implementation, but future designs should 
 - Avoid hard deletion of official HR records.
 - Provide correction workflows instead of silent overwrites for official records.
 - Exports and reports must identify generation time, requesting user, and office scope when implemented.
+
+## PRIME-HRM and Competency Records
+
+- Competency dictionaries, position profiles, proficiency levels, behavioral indicators, and mappings are governance-controlled records.
+- Competency assessments, gap analyses, IDPs, and readiness indicators must be visible only to authorized HR, supervisors, approving authorities, auditors, or the employee where policy permits.
+- Audit changes to competency definitions and position requirements because they can affect recruitment, placement, performance, promotion, reclassification, and rewards decisions.
+- Avoid using AI assistance for final personnel decisions without human review, policy basis, and audit trail.

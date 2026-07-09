@@ -6,6 +6,7 @@ The database is the authoritative record store for a government-grade DepEd HRIS
 
 - Use relational tables for core HR data.
 - Model Region, Division, District, School, and Implementing Unit explicitly.
+- Model competency management as core reference and transactional data, not as notes on employee records.
 - Keep office scoping clear on sensitive records.
 - Use foreign keys where relationships must be enforced.
 - Add indexes for office scope, status, effective dates, item numbers, employee IDs, and common filters.
@@ -13,7 +14,16 @@ The database is the authoritative record store for a government-grade DepEd HRIS
 
 ## Core Data Concepts
 
-Future schema design must distinguish Employee personal profile, government employment details, Plantilla Item, Position Title, Salary Grade, Item Number, Appointment, Promotion, Reclassification, Transfer, Separation, Service Record, leave records, 201 file metadata, recruitment and HRMPSB records, and Performance Rating. Do not merge these into one oversized employee table.
+Future schema design must distinguish Employee personal profile, government employment details, Plantilla Item, Position Title, Salary Grade, Item Number, Job Family, Position Profile, Competency Model, Competency Dictionary, Proficiency Level, Behavioral Indicator, Position-to-Competency Mapping, Competency Assessment, Competency Gap Analysis, Individual Development Plan, Learning and Development Intervention, Appointment, Promotion, Reclassification, Transfer, Separation, Service Record, leave records, 201 file metadata, recruitment and HRMPSB records, Performance Rating, Rewards and Recognition, and audit records. Do not merge these into one oversized employee table.
+
+## Competency Data Rules
+
+- Keep competency definitions separate from employee assessment results.
+- Keep position competency requirements separate from applicant or employee evidence.
+- Store proficiency levels and behavioral indicators as reference data with versioning or effective dates when policy changes require it.
+- Link recruitment, performance, learning and development, promotion, reclassification, succession readiness, and rewards records to competency evidence where applicable.
+- Preserve historical competency requirements used for a decision even if the current position profile changes later.
+- Index competency mappings by position profile, job family, competency, proficiency level, employee, and assessment period.
 
 ## Auditability
 

@@ -37,9 +37,25 @@ Do not implement scoring or ranking rules without explicit, current policy confi
 
 ## Policy Areas
 
-Use these as policy context, not as copied legal text: DepEd hiring, placement, and promotion guidelines; DepEd Order No. 007, s. 2023; DepEd Order No. 020, s. 2024; DepEd Order No. 024, s. 2025; Civil Service Commission rules; Data Privacy Act; and government records management requirements.
+Use these as policy context, not as copied legal text: CSC PRIME-HRM; CSC Resolution No. 2600005; Agency Competency-Based Human Resource Management System; DepEd hiring, placement, promotion, and reclassification guidelines; DepEd Order No. 007, s. 2023; DepEd Order No. 020, s. 2024; DepEd Order No. 024, s. 2025; Civil Service Commission rules; Data Privacy Act; and government records management requirements.
 
 When exact eligibility, ranking, documentary, or retention rules matter, verify them from official sources before implementation.
+
+## PRIME-HRM and CBHRMS Foundation
+
+This HRIS must align with meritocracy and excellence in government HRM. Competency-Based Human Resource Management System principles are a core architecture foundation, not a future add-on.
+
+Every major HR lifecycle process must be able to reference competencies:
+
+- Recruitment compares applicant qualifications and competencies against position profiles.
+- Selection and placement consider position competency requirements.
+- Performance management connects ratings with competency expectations.
+- Learning and development addresses competency gaps through Individual Development Plans.
+- Promotion and reclassification use competency evidence, readiness, and merit selection alignment.
+- Succession planning tracks readiness for leadership and critical roles.
+- Rewards and recognition link to performance and demonstrated competencies.
+
+Codex must model competency-aware concepts such as Competency Model, Core Competencies, Leadership Competencies, Functional or Technical Competencies, Competency Dictionary, Job Family, Position Profile, Position-to-Competency Mapping, Proficiency Levels, Behavioral Indicators, Competency Gap Analysis, Individual Development Plan, Learning and Development Intervention, Succession Planning Readiness, Promotion Readiness, Performance Rating Linkage, Rewards and Recognition Linkage, Merit Selection Plan Alignment, SPMS Alignment, and PRAISE Alignment.
 
 ## Records and Privacy
 
