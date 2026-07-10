@@ -47,6 +47,12 @@ Business processes must remain stable even when a DepEd Order, memorandum, CSC r
 | `23-document-approval-routing.md` | Reusable document routing and approval process. |
 | `24-prime-hrm-alignment.md` | PRIME-HRM readiness and evidence management. |
 | `25-ai-automation-opportunities.md` | AI and automation governance pipeline. |
+| `26-policy-versioning.md` | Policy registry, supersession, effectivity, and local issuance control. |
+| `27-merit-selection-plan.md` | Merit Selection Plan versioning and appointment pathway governance. |
+| `28-hrmpsb-governance.md` | HRMPSB constitution, membership, quorum, recusal, and deliberation records. |
+| `29-assessment-framework-engine.md` | Versioned assessment frameworks and immutable evaluation snapshots. |
+| `30-appointment-and-csc-action.md` | Appointment preparation, approval, CSC submission, and action tracking. |
+| `31-expanded-career-progression-pathways.md` | Distinct career progression, reclassification, retitling, conversion, Master Teacher, and School Principal pathways. |
 
 ## Rating Definitions
 
@@ -60,3 +66,9 @@ Business processes must remain stable even when a DepEd Order, memorandum, CSC r
 ## Implementation Rule
 
 Future modules must begin from these process documents, then map to data tables, permissions, UI screens, workflow states, audit events, and tests. Do not build a feature directly from a policy title alone.
+
+## 2026 Policy-Governance Rule
+
+The HRIS must not treat every employee advancement as one generic promotion workflow. The architecture must distinguish open-vacancy appointment, promotion to higher teaching positions, expanded reclassification, career progression, retitling or position conversion, Master Teacher progression, School Principal progression, and other personnel movement.
+
+Every workflow that uses criteria, qualification standards, competency requirements, HRMPSB composition, report templates, or appointment rules must reference an approved policy version, assessment-framework version, qualification-standard version, competency-framework version, Merit Selection Plan version, and effectivity period. Completed evaluations must preserve immutable snapshots of applicant data, employee data, submitted documents, criteria, scores, evaluator actions, performance-rating history, competency evidence, HRMPSB constitution, conflict-of-interest declarations, recusal records, quorum record, deliberation record metadata, recommendation, and appointment action.

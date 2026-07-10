@@ -4,6 +4,8 @@
 
 Support DepEd teacher hiring workflows, including application, screening, comparative assessment, ranking, registry-style outputs where applicable, appointment recommendation, and placement.
 
+Teacher hiring is an open-vacancy or registry-style selection workflow. It must be kept separate from Master Teacher progression, higher teaching position promotion, expanded reclassification, and ordinary personnel movement.
+
 ## Trigger
 
 Teacher vacancy, school staffing need, teacher registry cycle, newly authorized item, replacement need, or policy-directed hiring period.
@@ -16,22 +18,27 @@ Teacher-applicant, school or SDO HR, evaluator, HRMPSB, school head, appointing 
 
 Teacher vacancy, publication, applicant profile, education, eligibility, experience, training, performance or demonstration evidence where applicable, documents, criteria, and position competency profile.
 
+The hiring cycle must also reference the policy version, local memorandum version where applicable, qualification-standard version, teacher assessment-framework version, Merit Selection Plan version, competency-framework version, and effectivity period.
+
 ## High-Level Process Flow
 
 1. Validate teacher position and publication details.
 2. Accept teacher applications and documentary requirements.
 3. Conduct QS and completeness checks.
 4. Conduct initial evaluation and comparative assessment using verified criteria.
-5. Record HRMPSB evaluation and ranking.
-6. Produce CAR, CAR-RQA, RQA-style, or equivalent outputs where applicable.
-7. Track appointment recommendation and placement to school or office.
+5. Freeze immutable applicant, document, QS, and evaluation snapshots.
+6. Record HRMPSB evaluation, quorum, recusals, deliberation metadata, and ranking.
+7. Produce CAR, CAR-RQA, RQA-style, or equivalent outputs where applicable.
+8. Track appointment recommendation, CSC submission lifecycle where applicable, and placement to school or office.
 
 ## Decision Points
 
 - Which teacher hiring issuance or memorandum applies?
 - Is the applicant eligible and within the correct registry or vacancy context?
 - Which criteria, cutoffs, ranking, or registry output applies?
+- Which policy, local memorandum, assessment framework, and QS version were effective for the cycle?
 - Is the target school, district, or division placement valid?
+- Is the HRMPSB properly constituted for the cycle and free from unresolved conflict-of-interest issues?
 
 ## Outputs
 
@@ -52,6 +59,18 @@ Teacher competencies should connect to position profiles, classroom-related evid
 ## System Responsibilities
 
 Provide teacher-specific cycles, configurable criteria, document lists, registry-style output templates, school placement tracking, and audit logs.
+
+The system must support immutable teacher-applicant snapshots, policy and local memorandum references, teacher-specific assessment framework versions, historical performance-rating snapshots where employee-applicants are involved, and appointment/CSC action tracking.
+
+## Teacher Hiring Boundary
+
+This workflow covers entry or open-vacancy teacher hiring and related registry-style outputs. Master Teacher progression and expanded career progression must be handled by separate pathway records because their triggers, evidence, assessment basis, and appointment or reclassification actions may differ.
+
+## Manual Validation Flags
+
+- Confirm the exact teacher hiring assessment framework, outputs, effectivity dates, and local implementing memoranda before configuration.
+- Confirm how CAR, CAR-RQA, RQA-style, or equivalent outputs apply per cycle and position group.
+- Confirm whether transitory provisions apply to pending cycles when a new DepEd issuance or memorandum takes effect.
 
 ## Automation Opportunity Rating
 

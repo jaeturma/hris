@@ -16,14 +16,17 @@ Employee, supervisor, school or office head, HR performance administrator, appro
 
 Employee assignment, performance targets, rating records, competency expectations, accomplishments, evidence documents, supervisor notes, and review approvals.
 
+Required governance inputs include performance cycle, rating framework version, historical performance-rating snapshot, rater identity, approval history, competency-framework version where linked, and effectivity period.
+
 ## High-Level Process Flow
 
 1. Establish performance cycle and employee scope.
 2. Define targets and expectations according to role and office context.
 3. Monitor progress and collect evidence.
 4. Conduct rating and review.
-5. Link performance results to competency gaps, IDP, promotion readiness, and rewards eligibility.
-6. Preserve approved ratings and audit history.
+5. Freeze approved performance-rating snapshots for later use in recruitment, promotion, career progression, reclassification, rewards, or discipline-related processes.
+6. Link performance results to competency gaps, IDP, promotion readiness, and rewards eligibility.
+7. Preserve approved ratings and audit history.
 
 ## Decision Points
 
@@ -31,6 +34,8 @@ Employee assignment, performance targets, rating records, competency expectation
 - Are targets and ratings approved?
 - Do ratings trigger L&D, recognition, promotion readiness, or intervention?
 - What information may be shown to HRMPSB or supervisors?
+- Which historical rating version is valid for the action being evaluated?
+- Does a pending rating correction affect a frozen evaluation snapshot?
 
 ## Outputs
 
@@ -51,6 +56,15 @@ Connects performance ratings with competency expectations, gaps, learning plans,
 ## System Responsibilities
 
 Manage cycles, ratings, approvals, links to competencies and IDPs, evidence documents, restricted views, and audit trail.
+
+The system must store historical performance-rating snapshots with cycle, office assignment, rater, approving authority, rating framework version, date approved, correction history, and usage history. Completed HRMPSB or evaluation records must retain the performance snapshot used at the time and must not be silently changed by later corrections.
+
+## Performance Snapshot Rules
+
+- A workflow may reference a performance rating only through a versioned snapshot.
+- Corrections must create a new version and record whether downstream evaluations require reconsideration.
+- HRMPSB and evaluator views must show the snapshot used, its date, and whether later corrections exist.
+- AI may summarize performance evidence only from authorized, versioned records.
 
 ## Automation Opportunity Rating
 

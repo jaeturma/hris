@@ -4,6 +4,8 @@
 
 Manage promotion or selection for school administrator and school head roles using position requirements, performance evidence, leadership competencies, HRMPSB review, and appointment tracking.
 
+This process must distinguish School Principal progression or school administrator selection from teacher hiring, Master Teacher progression, expanded reclassification, retitling or position conversion, and ordinary personnel movement.
+
 ## Trigger
 
 Vacancy in school administrator or school head position, career progression opportunity, succession need, or approved promotion cycle.
@@ -16,20 +18,25 @@ Employee-applicant, HR officer, school or office head, evaluator, HRMPSB, appoin
 
 Position profile, leadership competency requirements, qualification standard, service record, performance ratings, training, experience, documents, assessments, and promotion application.
 
+Required governance inputs include policy version, qualification-standard version, leadership competency-framework version, assessment-framework version, Merit Selection Plan version, HRMPSB constitution, historical performance-rating snapshots, and effectivity period.
+
 ## High-Level Process Flow
 
 1. Validate available position and promotion track.
 2. Accept employee applications and supporting documents.
 3. Check QS, performance, experience, training, and leadership competency evidence.
-4. Conduct comparative assessment and HRMPSB evaluation.
-5. Rank or recommend according to verified policy configuration.
-6. Track appointment, movement, service record update, and 201 file update.
+4. Freeze employee, service, performance-rating, competency, and document snapshots.
+5. Conduct comparative assessment and HRMPSB evaluation using the applicable versioned framework.
+6. Record quorum, conflict-of-interest declarations, recusals, deliberation metadata, and recommendation.
+7. Track appointment, CSC action where applicable, movement, service record update, and 201 file update.
 
 ## Decision Points
 
 - Does the employee meet QS, performance, and competency expectations?
 - Which promotion or career progression policy applies?
 - Is the leadership competency evidence sufficient for the position profile?
+- Is the pathway an open-vacancy school administrator appointment, School Principal progression, expanded reclassification, or other personnel action?
+- Which policy version and transition rule applies?
 - What appointment or movement record must follow?
 
 ## Outputs
@@ -51,6 +58,20 @@ Emphasizes leadership competencies, current proficiency, gaps, development histo
 ## System Responsibilities
 
 Maintain promotion workflows, leadership competency profiles, evidence checklists, HRMPSB records, recommendation history, and appointment updates.
+
+The system must support pathway-specific records for school administrator and School Principal progression, immutable historical performance-rating snapshots, evidence-based leadership competency assessments, cycle-specific HRMPSB membership, recusal declarations, quorum records, and appointment/CSC lifecycle tracking.
+
+## Workflow Boundary
+
+- School Principal progression must have its own pathway classification and assessment framework.
+- School administrator open-vacancy appointment remains recruitment/selection with leadership requirements.
+- Master Teacher progression must not be processed here.
+- Retitling or position conversion must not be treated as promotion unless the verified policy basis says so.
+
+## Manual Validation Flags
+
+- Validate the exact school head or school administrator pathways, documentary requirements, assessment framework, effectivity period, and transitory provisions.
+- Validate whether a specialized HRMPSB is required for the cycle.
 
 ## Automation Opportunity Rating
 
