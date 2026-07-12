@@ -1,0 +1,55 @@
+# WP-10-06 — Audit Completeness Review
+
+| Field | Value |
+|---|---|
+| ID / Epic | WP-10-06 / EPIC-10 Integration, Hardening and Phase Acceptance |
+| Status / Priority | Blocked / P1 |
+| Domain / Reviewer | Cross-cutting Governance / Architect, QA, Security and Business Acceptance |
+| Risk / Complexity | High / Medium |
+
+## Objective, context and scope
+
+Produce independently reviewable audit completeness review evidence for Phase 1 acceptance. It must preserve server-enforced office/authority controls and Phase 0.13 acceptance splits.
+
+Include only Audit Completeness Review, focused tests/review evidence and documentation. Exclude new HR modules, generic page builders, auth redesign, speculative components, AI/analytics, production deployment and unrelated fixes. Dependencies: All relevant Phase 1 mandatory packages substantially Accepted; preceding EPIC-10 evidence package.
+
+## References and policy
+
+Phase 0.12 hardening/release/DoD; Phase 0.13 G-009; Phase 1 gates and DoD; security/UI/testing standards, permission/audit catalogs and DoD. No direct HR policy rule is implemented. Accessibility, privacy, records and government audit controls apply; do not invent provisions.
+
+## Database/backend/frontend
+
+No database changes.
+
+Backend changes are limited to approved typed props/queries or correction of an explicitly accepted hardening defect. Controllers remain thin; Policies and server scope remain authoritative.
+
+Frontend: No feature UI; review existing behavior/evidence only.
+
+## Permissions, scope, audit and events
+
+Do not introduce generic permissions. Use approved abilities and Policies. Wrong-office, stale context, expired authority and technical-admin-without-business-authority are denied. Review or test these controls end-to-end.
+
+Audit any approved correction and record review evidence/correlation. No new domain event unless an approved correction creates a real completed fact with consumer.
+
+## Validation/security/tests
+
+Validate props/URLs/input server-side, prevent sensitive serialization and scope inference, preserve CSRF/session/security headers, and expose no secrets. Test or review focused behavior plus authorization/scope negatives, regression, TypeScript/static/lint/build, accessibility, migration/seeder/audit evidence as applicable. Manual review supplements, never replaces practical automation.
+
+## Acceptance criteria
+
+- Audit Completeness Review has objective evidence mapped to exact packages/requirements and no hidden dependency.
+- Unauthorized/wrong-office/stale/expired behavior remains denied; frontend cannot bypass server control.
+- Applicable automated/regression/security evidence passes.
+- Any Critical/High defect blocks acceptance and receives an owner/remediation package.
+- Documentation/traceability/status/evidence are complete; no unrelated feature is added.
+
+Apply central DoD. Evidence includes files/commits, commands/results, matrices, screenshots where UI, findings/disposition, approvals, limitations and final status.
+
+## Ready-to-Paste Codex Instruction
+
+> Execute WP-10-06 — Audit Completeness Review only after All relevant Phase 1 mandatory packages substantially Accepted; preceding EPIC-10 evidence package. Read AGENTS.md, Phase 0.12 hardening/release/DoD; Phase 0.13 G-009; Phase 1 gates and DoD, Phase 0.13 gaps, catalogs/gates/DoD and this package; inspect code/Git first.
+>
+> Perform only Audit Completeness Review. Generate evidence and only approved corrective changes.  Add/run focused automated negative and regression checks.
+>
+> Do not install packages, change auth, add business modules, waive High defects, treat UI as authorization, invent policy or refactor unrelated work. Stop on conflict. Report files, commands/tests/results, findings, corrections, documentation, approvals and unresolved issues.
+
